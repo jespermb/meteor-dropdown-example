@@ -1,0 +1,48 @@
+<head>
+  <title>dropdown-example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h1>Welcome to Dropdown example</h1>
+  {{> dropdown}}
+    </div>
+  </section>
+</body>
+
+<template name="dropdown">
+  <div class="dropdown {{#if isActive}}is-active{{/if}}">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
+        <span>Content</span>
+        <span class="icon is-small">
+          <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <div class="field">
+            <label class="label">Subscribe to newsletter</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="email" placeholder="Enter your email">
+              <span class="icon is-small is-left">
+                <i class="fa fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fa fa-check"></i>
+              </span>
+            </div>
+            <p class="control">
+              <a class="button is-info">Submit</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
